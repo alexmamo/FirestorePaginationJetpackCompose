@@ -69,7 +69,7 @@ The code in this project is licensed under the Apache License 2.0.
 [7]: https://kotlinlang.org/docs/coroutines-overview.html
 [8]: https://kotlinlang.org/docs/flow.html
 [9]: https://developer.android.com/jetpack/compose
-[10]: https://...
+[10]: https://medium.com/firebase-tips-tricks/how-to-implement-pagination-in-firestore-using-jetpack-compose-76b4c0b5acd5
 [11]: https://firebase.google.com/docs/android/setup
 [12]: https://developer.android.com/guide/navigation
 [13]: https://developer.android.com/topic/libraries/architecture/paging/v3-overview
