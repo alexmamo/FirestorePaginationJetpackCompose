@@ -14,7 +14,7 @@ import androidx.navigation.NavController
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.InternalCoroutinesApi
 import ro.alexmamo.firestorepaginationjetpackcompose.domain.model.Product
-import ro.alexmamo.firestorepaginationjetpackcompose.presentation.product.components.ProductDetailsTopBar
+import ro.alexmamo.firestorepaginationjetpackcompose.presentation.product.components.ProductTopBar
 
 @Composable
 @InternalCoroutinesApi
@@ -25,7 +25,7 @@ fun ProductScreen(
 ) {
     Scaffold(
         topBar = {
-            ProductDetailsTopBar(navController)
+            ProductTopBar(navController)
         }
     ) {
         Box(

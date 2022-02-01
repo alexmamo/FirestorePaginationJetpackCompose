@@ -13,7 +13,7 @@ import ro.alexmamo.firestorepaginationjetpackcompose.core.Constants.PRODUCT_SCRE
 
 @Composable
 @InternalCoroutinesApi
-fun ProductDetailsTopBar(
+fun ProductTopBar(
     navController: NavController
 ) {
     TopAppBar (
