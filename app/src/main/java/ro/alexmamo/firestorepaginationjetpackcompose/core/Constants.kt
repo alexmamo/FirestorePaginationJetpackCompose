@@ -12,7 +12,4 @@ object Constants {
     //Screens
     const val PRODUCTS_SCREEN = "Products"
     const val PRODUCT_SCREEN = "Product"
-
-    //Messages
-    const val ERROR_MESSAGE = "Unexpected error."
 }

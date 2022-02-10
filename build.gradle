@@ -11,7 +11,7 @@ buildscript {
         activity_compose_version = "1.4.0"
         paging_version = "3.1.0"
         material_version = "1.5.0"
-        compose_version = "1.2.0-alpha01"
+        compose_version = "1.2.0-alpha02"
         hilt_navigation_compose_version = "1.0.0"
         firebase_bom_version = "29.0.4"
         paging_compose_version = "1.0.0-alpha14"
