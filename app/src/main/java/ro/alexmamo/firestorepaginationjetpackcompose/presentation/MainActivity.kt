@@ -11,8 +11,8 @@ import kotlinx.coroutines.InternalCoroutinesApi
 import ro.alexmamo.firestorepaginationjetpackcompose.navigation.NavGraph
 
 @AndroidEntryPoint
-@InternalCoroutinesApi
 @ExperimentalPagingApi
+@InternalCoroutinesApi
 @ExperimentalCoroutinesApi
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

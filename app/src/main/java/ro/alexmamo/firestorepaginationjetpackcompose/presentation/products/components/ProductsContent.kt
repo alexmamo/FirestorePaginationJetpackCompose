@@ -20,8 +20,8 @@ import ro.alexmamo.firestorepaginationjetpackcompose.domain.model.Product
 import ro.alexmamo.firestorepaginationjetpackcompose.presentation.products.ProductsViewModel
 
 @Composable
-@ExperimentalPagingApi
 @InternalCoroutinesApi
+@ExperimentalPagingApi
 @ExperimentalCoroutinesApi
 fun ProductsContent(
     viewModel: ProductsViewModel = hiltViewModel(),
