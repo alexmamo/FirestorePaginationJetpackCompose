@@ -8,7 +8,7 @@ import androidx.paging.ExperimentalPagingApi
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.InternalCoroutinesApi
-import ro.alexmamo.firestorepaginationjetpackcompose.presentation.navigation.NavGraph
+import ro.alexmamo.firestorepaginationjetpackcompose.navigation.NavGraph
 
 @AndroidEntryPoint
 @InternalCoroutinesApi
@@ -18,9 +18,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val navController = rememberNavController()
             NavGraph(
-                navController = navController
+                navController = rememberNavController()
             )
         }
     }

@@ -7,14 +7,13 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.ArrowBack
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavController
 import kotlinx.coroutines.InternalCoroutinesApi
 import ro.alexmamo.firestorepaginationjetpackcompose.core.Constants.PRODUCT_SCREEN
 
 @Composable
 @InternalCoroutinesApi
 fun ProductTopBar(
-    navController: NavController
+    navigateBack: () -> Unit
 ) {
     TopAppBar (
         title = {
@@ -24,9 +23,7 @@ fun ProductTopBar(
         },
         navigationIcon = {
             IconButton(
-                onClick = {
-                    navController.popBackStack()
-                }
+                onClick = navigateBack
             ) {
                 Icon(
                     imageVector = Icons.Outlined.ArrowBack,
