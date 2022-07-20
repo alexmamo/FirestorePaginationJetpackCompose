@@ -16,8 +16,6 @@ import ro.alexmamo.firestorepaginationjetpackcompose.core.Constants.PRODUCTS
 import ro.alexmamo.firestorepaginationjetpackcompose.data.repository.FirestorePagingSource
 import ro.alexmamo.firestorepaginationjetpackcompose.data.repository.ProductsRepositoryImpl
 import ro.alexmamo.firestorepaginationjetpackcompose.domain.repository.ProductsRepository
-import ro.alexmamo.firestorepaginationjetpackcompose.domain.use_case.GetProducts
-import ro.alexmamo.firestorepaginationjetpackcompose.domain.use_case.UseCases
 
 @Module
 @ExperimentalCoroutinesApi
@@ -32,7 +30,9 @@ object AppModule {
     @Provides
     fun provideFirestorePagingSource(
         queryProductsByName: Query
-    ) = FirestorePagingSource(queryProductsByName)
+    ) = FirestorePagingSource(
+        queryProductsByName = queryProductsByName
+    )
 
     @Provides
     fun providePagingConfig() = PagingConfig(
@@ -43,10 +43,8 @@ object AppModule {
     fun provideProductsRepository(
         source: FirestorePagingSource,
         config: PagingConfig
-    ): ProductsRepository = ProductsRepositoryImpl(source, config)
-
-    @Provides
-    fun provideUseCases(repository: ProductsRepository) = UseCases(
-        getProducts = GetProducts(repository)
+    ): ProductsRepository = ProductsRepositoryImpl(
+        source = source,
+        config = config
     )
 }

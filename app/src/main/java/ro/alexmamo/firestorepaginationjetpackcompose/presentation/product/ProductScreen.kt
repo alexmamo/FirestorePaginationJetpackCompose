@@ -2,15 +2,12 @@ package ro.alexmamo.firestorepaginationjetpackcompose.presentation.product
 
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.InternalCoroutinesApi
 import ro.alexmamo.firestorepaginationjetpackcompose.domain.model.Product
 import ro.alexmamo.firestorepaginationjetpackcompose.presentation.product.components.ProductContent
 import ro.alexmamo.firestorepaginationjetpackcompose.presentation.product.components.ProductTopBar
 
 @Composable
-@InternalCoroutinesApi
-@ExperimentalCoroutinesApi
 fun ProductScreen(
     product: Product,
     navigateBack: () -> Unit,

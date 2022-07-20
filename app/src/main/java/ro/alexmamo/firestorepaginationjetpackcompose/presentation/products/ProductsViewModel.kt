@@ -5,13 +5,13 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.cachedIn
 import dagger.hilt.android.lifecycle.HiltViewModel
-import ro.alexmamo.firestorepaginationjetpackcompose.domain.use_case.UseCases
+import ro.alexmamo.firestorepaginationjetpackcompose.domain.repository.ProductsRepository
 import javax.inject.Inject
 
 @HiltViewModel
 @ExperimentalPagingApi
 class ProductsViewModel @Inject constructor(
-    useCases: UseCases
+    repo: ProductsRepository
 ): ViewModel() {
-    val products = useCases.getProducts().cachedIn(viewModelScope)
+    val products = repo.getProducts().cachedIn(viewModelScope)
 }

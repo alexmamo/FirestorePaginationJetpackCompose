@@ -3,9 +3,8 @@
     package="ro.alexmamo.firestorepaginationjetpackcompose">
 
     <application
-        android:name=".FirestorePaginationJetpackCompose"
+        android:name=".FirestorePaginationJetpackComposeApp"
         android:allowBackup="true"
-        android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"

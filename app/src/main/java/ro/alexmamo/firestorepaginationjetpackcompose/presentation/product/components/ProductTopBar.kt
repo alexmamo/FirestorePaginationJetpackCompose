@@ -7,11 +7,9 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.ArrowBack
 import androidx.compose.runtime.Composable
-import kotlinx.coroutines.InternalCoroutinesApi
 import ro.alexmamo.firestorepaginationjetpackcompose.core.Constants.PRODUCT_SCREEN
 
 @Composable
-@InternalCoroutinesApi
 fun ProductTopBar(
     navigateBack: () -> Unit
 ) {

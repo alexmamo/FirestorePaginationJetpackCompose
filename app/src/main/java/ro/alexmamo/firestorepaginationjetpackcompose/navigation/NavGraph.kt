@@ -8,8 +8,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.paging.ExperimentalPagingApi
 import com.google.gson.Gson
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.InternalCoroutinesApi
 import ro.alexmamo.firestorepaginationjetpackcompose.domain.model.Product
 import ro.alexmamo.firestorepaginationjetpackcompose.navigation.Screen.ProductScreen
 import ro.alexmamo.firestorepaginationjetpackcompose.navigation.Screen.ProductsScreen
@@ -17,9 +15,7 @@ import ro.alexmamo.firestorepaginationjetpackcompose.presentation.product.Produc
 import ro.alexmamo.firestorepaginationjetpackcompose.presentation.products.ProductsScreen
 
 @Composable
-@InternalCoroutinesApi
 @ExperimentalPagingApi
-@ExperimentalCoroutinesApi
 fun NavGraph (
     navController: NavHostController
 ) {
