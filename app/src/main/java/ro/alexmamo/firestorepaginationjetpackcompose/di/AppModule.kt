@@ -9,7 +9,6 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import ro.alexmamo.firestorepaginationjetpackcompose.core.Constants.NAME
 import ro.alexmamo.firestorepaginationjetpackcompose.core.Constants.PAGE_SIZE
 import ro.alexmamo.firestorepaginationjetpackcompose.core.Constants.PRODUCTS
@@ -18,7 +17,6 @@ import ro.alexmamo.firestorepaginationjetpackcompose.data.repository.ProductsRep
 import ro.alexmamo.firestorepaginationjetpackcompose.domain.repository.ProductsRepository
 
 @Module
-@ExperimentalCoroutinesApi
 @InstallIn(SingletonComponent::class)
 object AppModule {
     @Provides
