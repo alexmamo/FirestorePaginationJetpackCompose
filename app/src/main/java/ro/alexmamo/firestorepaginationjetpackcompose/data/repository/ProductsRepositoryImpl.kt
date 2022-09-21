@@ -11,7 +11,7 @@ class ProductsRepositoryImpl @Inject constructor(
     private val source: FirestorePagingSource,
     private val config: PagingConfig
 ): ProductsRepository {
-    override fun getProducts()= Pager(
+    override fun getProducts() = Pager(
         config = config
     ) {
         source
