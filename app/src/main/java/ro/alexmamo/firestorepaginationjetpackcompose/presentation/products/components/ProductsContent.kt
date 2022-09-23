@@ -1,6 +1,5 @@
 package ro.alexmamo.firestorepaginationjetpackcompose.presentation.products.components
 
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -14,7 +13,6 @@ import androidx.paging.LoadState.Loading
 import androidx.paging.compose.collectAsLazyPagingItems
 import androidx.paging.compose.items
 import ro.alexmamo.firestorepaginationjetpackcompose.components.ProgressBar
-import ro.alexmamo.firestorepaginationjetpackcompose.core.Utils.Companion.printError
 import ro.alexmamo.firestorepaginationjetpackcompose.domain.model.Product
 import ro.alexmamo.firestorepaginationjetpackcompose.presentation.products.ProductsViewModel
 
@@ -25,29 +23,27 @@ fun ProductsContent(
     padding: PaddingValues,
     navigateToProductScreen: (product: Product) -> Unit
 ) {
-    val products = viewModel.products.collectAsLazyPagingItems()
-    Box(
+    val pagingProducts = viewModel.products.collectAsLazyPagingItems()
+    val append = pagingProducts.loadState.append
+
+    LazyColumn(
         modifier = Modifier.fillMaxSize().padding(padding)
     ) {
-        LazyColumn {
-            items(
-                items = products
-            ) { product ->
-                product?.let {
-                    ProductCard(
-                        product = product,
-                        onProductClick = navigateToProductScreen
-                    )
-                }
+        items(
+            items = pagingProducts
+        ) { product ->
+            product?.let {
+                ProductCard(
+                    product = product,
+                    onProductClick = navigateToProductScreen
+                )
             }
         }
     }
-    products.loadState.apply {
-        when {
-            refresh is Loading -> ProgressBar()
-            refresh is Error -> printError(refresh as Error)
-            append is Loading -> ProgressBar()
-            append is Error -> printError(append as Error)
-        }
+    if (append is Loading) {
+        ProgressBar()
+    }
+    if (append is Error) {
+        print(append)
     }
 }
