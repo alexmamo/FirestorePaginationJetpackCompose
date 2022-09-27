@@ -13,6 +13,7 @@ import androidx.paging.LoadState.Loading
 import androidx.paging.compose.collectAsLazyPagingItems
 import androidx.paging.compose.items
 import ro.alexmamo.firestorepaginationjetpackcompose.components.ProgressBar
+import ro.alexmamo.firestorepaginationjetpackcompose.core.Utils.Companion.print
 import ro.alexmamo.firestorepaginationjetpackcompose.domain.model.Product
 import ro.alexmamo.firestorepaginationjetpackcompose.presentation.products.ProductsViewModel
 

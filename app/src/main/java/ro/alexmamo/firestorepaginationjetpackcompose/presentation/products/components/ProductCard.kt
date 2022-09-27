@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import ro.alexmamo.firestorepaginationjetpackcompose.core.Constants.NO_VALUE
 import ro.alexmamo.firestorepaginationjetpackcompose.domain.model.Product
 
 @Composable
@@ -41,13 +42,12 @@ fun ProductCard(
                 },
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            product.name?.let { name ->
-                Text(
-                    text = name,
-                    color = Color.DarkGray,
-                    fontSize = 25.sp
-                )
-            }
+            val productName = product.name ?: NO_VALUE
+            Text(
+                text = productName,
+                color = Color.DarkGray,
+                fontSize = 25.sp
+            )
         }
     }
 }

@@ -8,7 +8,7 @@ import javax.inject.Singleton
 
 @Singleton
 class ProductsRepositoryImpl @Inject constructor(
-    private val source: FirestorePagingSource,
+    private val source: ProductsPagingSource,
     private val config: PagingConfig
 ): ProductsRepository {
     override fun getProducts() = Pager(

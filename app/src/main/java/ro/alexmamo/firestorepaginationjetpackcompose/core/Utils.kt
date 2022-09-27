@@ -6,7 +6,7 @@ import ro.alexmamo.firestorepaginationjetpackcompose.core.Constants.TAG
 
 class Utils {
     companion object {
-        fun printError(errorState: LoadState.Error) {
+        fun print(errorState: LoadState.Error) {
             val error = errorState.error
             Log.d(TAG, error.message ?: error.toString())
         }
