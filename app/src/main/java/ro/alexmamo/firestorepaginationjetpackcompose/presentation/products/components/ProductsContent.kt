@@ -25,6 +25,7 @@ fun ProductsContent(
     navigateToProductScreen: (product: Product) -> Unit
 ) {
     val pagingProducts = viewModel.products.collectAsLazyPagingItems()
+    val refresh = pagingProducts.loadState.refresh
     val append = pagingProducts.loadState.append
 
     LazyColumn(
@@ -41,10 +42,12 @@ fun ProductsContent(
             }
         }
     }
-    if (append is Loading) {
-        ProgressBar()
-    }
-    if (append is Error) {
-        print(append)
+    pagingProducts.loadState.apply {
+        when {
+            refresh is Loading -> ProgressBar()
+            refresh is Error -> print(refresh)
+            append is Loading -> ProgressBar()
+            append is Error -> print(append)
+        }
     }
 }
