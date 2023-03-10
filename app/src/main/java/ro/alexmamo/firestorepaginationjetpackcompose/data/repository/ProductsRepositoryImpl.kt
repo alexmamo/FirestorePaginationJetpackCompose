@@ -2,6 +2,7 @@ package ro.alexmamo.firestorepaginationjetpackcompose.data.repository
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
+import ro.alexmamo.firestorepaginationjetpackcompose.data.paging.ProductsPagingSource
 import ro.alexmamo.firestorepaginationjetpackcompose.domain.repository.ProductsRepository
 import javax.inject.Inject
 import javax.inject.Singleton

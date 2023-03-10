@@ -1,4 +1,4 @@
-package ro.alexmamo.firestorepaginationjetpackcompose.data.repository
+package ro.alexmamo.firestorepaginationjetpackcompose.data.paging
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState

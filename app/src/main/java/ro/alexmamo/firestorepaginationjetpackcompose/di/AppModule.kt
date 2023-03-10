@@ -12,7 +12,7 @@ import dagger.hilt.components.SingletonComponent
 import ro.alexmamo.firestorepaginationjetpackcompose.core.Constants.NAME
 import ro.alexmamo.firestorepaginationjetpackcompose.core.Constants.PAGE_SIZE
 import ro.alexmamo.firestorepaginationjetpackcompose.core.Constants.PRODUCTS
-import ro.alexmamo.firestorepaginationjetpackcompose.data.repository.ProductsPagingSource
+import ro.alexmamo.firestorepaginationjetpackcompose.data.paging.ProductsPagingSource
 import ro.alexmamo.firestorepaginationjetpackcompose.data.repository.ProductsRepositoryImpl
 import ro.alexmamo.firestorepaginationjetpackcompose.domain.repository.ProductsRepository
 
